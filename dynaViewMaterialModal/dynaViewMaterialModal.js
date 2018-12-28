@@ -13,11 +13,10 @@ Template.DynaViewMaterialModal.onRendered(() => {
   M.Modal.init(element, {
     dismissible: true,
     onCloseEnd() {
-      Log.log(['debug', 'dyna'], `Modal closed`)
+      Log.log(['debug', 'dynaview'], `Modal closed`)
       Session.set('DynaView', undefined)
     }
   })
   const modal = M.Modal.getInstance(element)
-  console.log('MODAL', modal)
   modal.open()
 })
