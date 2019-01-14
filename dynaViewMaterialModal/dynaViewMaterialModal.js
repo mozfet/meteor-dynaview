@@ -1,6 +1,7 @@
 // imports
 import { Template } from 'meteor/templating'
 import { Session } from 'meteor/session'
+// import { Log } from 'meteor/mozfet:meteor-logs'
 import './dynaViewMaterialModal.html'
 
 // when created
@@ -13,7 +14,7 @@ Template.DynaViewMaterialModal.onRendered(() => {
   M.Modal.init(element, {
     dismissible: true,
     onCloseEnd() {
-      Log.log(['debug', 'dynaview'], `Modal closed`)
+      // Log.log(['debug', 'dynaview'], `Modal closed`)
       Session.set('DynaView', undefined)
     }
   })
